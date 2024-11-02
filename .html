@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Огляд iPhone 15, його характеристики, плюси та мінуси">
+    <title>iPhone 15 - Характеристики, Плюси та Мінуси</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-bottom: 2px solid #2980b9;
+        }
+
+        header h1 {
+            font-size: 56px;
+            margin: 0;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header h1:hover {
+            color: #3498db;
+        }
+
+        header p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .specs, .pros-cons, .extra-info, .gallery, .reviews, .news {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        h2, h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 32px;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 26px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 18px;
+        }
+
+        .pros-cons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .pros-cons .box {
+            flex: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .extra-info {
+            background-color: #ecf0f1;
+        }
+
+        .extra-info p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .extra-info img {
+            max-width: 50%;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .share-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .share-buttons a {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-buttons a:hover {
+            background-color: #3498db;
+        }
+
+        .video-review {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .reviews {
+            margin: 20px 0;
+        }
+
+        .news {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        footer p.credits {
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+
+        @media (max-width: 768px) {
+            .pros-cons {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            h2, h3 {
+                font-size: 28px;
+            }
+
+            ul li {
+                font-size: 16px;
+            }
+
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>iPhone 15</h1>
+        <p>Характеристики, плюси та мінуси</p>
+    </header>
+
+    <div class="container">
+
+        <div class="specs">
+            <h2>Основні характеристики iPhone 15</h2>
+            <ul>
+                <li>Дисплей: 6.1 дюймів OLED Super Retina XDR</li>
+                <li>Процесор: A16 Bionic з 6-ядерним CPU та 5-ядерним GPU</li>
+                <li>Камера: Основна камера 48 МП, фронтальна камера 12 МП</li>
+                <li>Акумулятор: До 20 годин відтворення відео, підтримка швидкої зарядки</li>
+                <li>Обсяг пам'яті: 128 ГБ, 256 ГБ, 512 ГБ</li>
+                <li>Операційна система: iOS 17</li>
+                <li>Матеріали корпусу: Алюміній, Ceramic Shield</li>
+                <li>Підтримка 5G та Wi-Fi 6E</li>
+                <li>Захист: IP68</li>
+            </ul>
+            
+        </div>
+
+        <div class="pros-cons">
+            <div class="box">
+                <h3>Плюси iPhone 15</h3>
+                <ul>
+                    <li>Потужний процесор A16 Bionic для плавної роботи та ігор</li>
+                    <li>Відмінна камера з нічним режимом та 4K відеозаписом</li>
+                    <li>Висока якість дисплею з точною передачею кольору</li>
+                    <li>Підтримка 5G для швидкого інтернету</li>
+                    <li>Захист від води та пилу за стандартом IP68</li>
+                    <li>Легка інтеграція з іншими пристроями Apple</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Мінуси iPhone 15</h3>
+                <ul>
+                    <li>Висока ціна порівняно з конкурентами</li>
+                    <li>Відсутність роз'єму для навушників</li>
+                    <li>Обмежені можливості налаштування в порівнянні з Android</li>
+                    <li>Дизайн майже не змінився в порівнянні з попередніми моделями</li>
+                    <li>Відсутність слота для карт пам'яті</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="extra-info">
+            <h2>Додаткова інформація</h2>
+            <p>
+                iPhone 15 отримав безліч покращень, включаючи нові можливості камери, які дозволяють користувачам знімати ще якісніші фотографії. Завдяки потужному процесору A16 Bionic, пристрій здатний виконувати складні завдання швидше, ніж будь-коли. Крім того, iPhone 15 має енергоефективний акумулятор, який забезпечує тривалу роботу без підзарядки.
+            </p>
+            <img src="https://mcstore.com.ua/news/wp-content/uploads/2023/08/iPhone-15-All-Colors-Mock-Feature-mc.jpeg" />
+        </div>
+
+        
+
+        <div class="share-buttons">
+            <h2>Поділитися</h2>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+
+       
+        <div class="reviews">
+            <h2>Відгуки користувачів</h2>
+            <ul>
+                <li>"Найкращий iPhone на сьогодні!" - Олег</li>
+                <li>"Чудова камера і продуктивність." - Марія</li>
+                <li>"Дуже задоволений покупкою." - Андрій</li>
+            </ul>
+        </div>
+
+        <div class="news">
+            <h2>Останні новини</h2>
+            <p>Apple анонсувала нову версію iOS 17 з покращеними функціями безпеки.</p>
+            <p>iPhone 15 став найбільш продаваним смартфоном у першому кварталі 2024 року.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 iPhone Review. Всі права захищені.</p>
+        <p class="credits">Джерела: Apple, Tech Reviews</p>
+    </footer>
+
+</body>
+
+</html>
