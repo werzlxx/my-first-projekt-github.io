@@ -3,236 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audi – Преміум Автомобілі</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Усе про Minecraft: особливості, факти та можливості.">
+    <meta name="keywords" content="Minecraft, гра, особливості, факти">
+    <title>Все про Minecraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Загальні стилі */
-        body {
-            font-family: 'Arial', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            color: #333;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(270deg, #1b5e20, #c5e1a5, #1b5e20);
+            background-size: 300% 300%; /* Для анімації фону */
+            animation: gradient 10s ease infinite; /* Анімація фону */
+            color: #e0e0e0; /* Світлий текст */
+            line-height: 1.6;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         header {
-            background-color: #000;
-            color: #fff;
-            padding: 20px;
+            background: rgba(34, 34, 34, 0.9);
+            padding: 30px;
             text-align: center;
-            font-size: 36px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            margin-bottom: 40px;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #222;
-            padding: 10px 0;
+
+        h1 {
+            font-family: 'Lora', serif; /* Заголовок */
+            font-size: 3.5em;
+            color: #cddc39;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s, color 0.3s;
         }
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
+
+        h1:hover {
+            transform: scale(1.1);
+            color: #ffeb3b; /* Зміна кольору при наведенні */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #d4e157;
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
         }
-        nav a:hover {
-            background-color: #555;
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+            transform: scale(1.1);
         }
-        .hero {
-            position: relative;
-            text-align: center;
-            color: white;
+
+        main {
+            margin: 0 50px;
         }
-        .hero img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
+
+        section {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1); /* Напівпрозорий фон для секцій */
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+            animation: slideIn 0.5s;
+            position: relative; /* Для паралакс-ефекту */
         }
-        .hero-text {
+
+        section::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px 40px;
-            border-radius: 10px;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin: 0;
-            letter-spacing: 1px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://example.com/your-background-image.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1; /* Легке затемнення фону */
+            z-index: 0;
         }
 
-        /* Загальні контейнерні стилі */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section-title {
-            text-align: center;
-            margin: 40px 0 20px 0;
-            font-size: 28px;
-            color: #000;
-            text-transform: uppercase;
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Моделі авто */
-        .models {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px 0;
-        }
-        .model {
-            margin: 15px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            width: 300px;
+        h2 {
+            font-family: 'Lora', serif; /* Заголовки секцій */
+            font-size: 2.5em;
+            color: #aeea00;
+            margin-bottom: 20px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1; /* Над фоновим зображенням */
         }
-        .model:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+        p, ul {
+            font-size: 1.2em;
+            text-align: justify;
+            padding: 0 20px;
+            color: #e0e0e0;
+            position: relative;
+            z-index: 1; /* Над фоновим зображенням */
         }
-        .model img {
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            color: #aeea00;
+        }
+
+        .minecraft-img {
             width: 100%;
-            border-radius: 10px;
+            max-width: 800px;
+            height: auto;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
             transition: transform 0.3s ease;
         }
-        .model img:hover {
+
+        .minecraft-img:hover {
             transform: scale(1.05);
         }
-        .model h3 {
-            margin: 15px 0;
-            font-size: 22px;
-            color: #000;
-        }
-        .model p {
-            font-size: 16px;
-            color: #666;
-        }
 
-        /* Історія та технології */
-        .history, .technology {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            line-height: 1.8;
-        }
-        .history h2, .technology h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #000;
-            text-transform: uppercase;
-        }
-        .history p, .technology p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-            text-align: justify;
-        }
-
-        /* Контакти */
-        .contact {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 40px;
-            letter-spacing: 1px;
-        }
-        .contact h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .contact p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        /* Футер */
         footer {
+            background: rgba(34, 34, 34, 0.9);
+            padding: 15px;
             text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-            font-size: 14px;
+            color: #d4e157;
+            margin-top: 30px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta {
+            background: linear-gradient(45deg, #ffeb3b, #d4e157);
+            border-radius: 50px;
+            padding: 15px 30px;
+            margin: 20px auto;
+            display: block;
+            width: fit-content;
+            color: #000;
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta:hover {
+            background: linear-gradient(45deg, #d4e157, #ffeb3b);
+            transform: scale(1.1);
+        }
+
+        #контакти a {
+            color: #d4e157;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #контакти a:hover {
+            color: #ffeb3b;
         }
     </style>
 </head>
 <body>
 
 <header>
-    Audi – Преміум Автомобілі
+    <h1>Все про Minecraft</h1>
+    <nav>
+        <ul>
+            <li><a href="#про-гру">Про гру</a></li>
+            <li><a href="#особливості">Особливості</a></li>
+            <li><a href="#цікаві-факти">Цікаві факти</a></li>
+            <li><a href="#вплив">Вплив на культуру</a></li>
+            <li><a href="#спільнота">Спільнота</a></li>
+            <li><a href="#контакти">Контакти</a></li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <a href="#">Головна</a>
-    <a href="#">Моделі</a>
-    <a href="#">Технології</a>
-    <a href="#">Історія</a>
-    <a href="#">Контакти</a>
-</nav>
+<main>
+    <section id="про-гру">
+        <h2>Що таке Minecraft?</h2>
+        <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.jpg" alt="Зображення гри Minecraft" class="minecraft-img" loading="lazy">
+        <p>Minecraft — це унікальна відеогра, що дозволяє гравцям зануритися в світ безмежної творчості. Від першого релізу у 2009 році гра привернула увагу мільйонів гравців завдяки своїй простій, але захоплюючій механіці.</p>
+        <p>У Minecraft ви можете створювати, досліджувати та виживати в динамічному світі, наповненому пригодами. Чи готові ви побудувати свій ідеальний будинок або дослідити темні печери?</p>
+        <a href="#особливості" class="cta">Дізнатися більше!</a>
+    </section>
 
-<!-- Hero Section -->
-<div class="hero">
-    <img src="https://cf-cdn-v6-api.audi.at/files/abe385b8c7aa1e87f366a1198f38c2c818d15e7b/24cdb8ba-8827-4841-a524-e0f07a941b99/q8e20224390-l-copy" alt="Audi Q8 e-tron">
-    
-    </div>
-</div>
+    <section id="особливості">
+        <h2>Основні особливості Minecraft</h2>
+        <ul>
+            <li><strong>Виживання:</strong> Збирайте ресурси, створюйте предмети та боріться за своє життя в небезпечному світі.</li>
+            <li><strong>Креатив:</strong> Безмежні можливості для будівництва з необмеженими ресурсами.</li>
+            <li><strong>Режим пригод:</strong> Унікальні карти з завданнями, створеними іншими гравцями.</li>
+            <li><strong>Мультиплеєр:</strong> Грайте з друзями на різних серверах, досліджуючи спільно нові світи.</li>
+            <li><strong>Модифікації:</strong> Гравці можуть створювати та використовувати моди для розширення ігрового процесу.</li>
+        </ul>
+        <img src="https://minecrafts.in.ua/wp-content/uploads/2024/10/oak_and_spruce_taiga_forest_spring_bliss_shaders_b-1024x576.png" alt="Особливості Minecraft" class="minecraft-img" loading="lazy">
+    </section>
 
-<div class="container">
-    <!-- Моделі -->
-    <h2 class="section-title">Популярні моделі Audi</h2>
-    <div class="models">
-        <div class="model">
-            <img src="https://cdn.motor1.com/images/mgl/8QMwo/s3/2022-audi-a8-l.jpg" alt="Audi A8">
-            <h3>Audi A8</h3>
-            <p>Розкішний седан преміум-класу з передовими технологіями, який втілює елегантність і комфорт.</p>
-        </div>
-        <div class="model">
-            <img src="https://s1.avilon.ru/upload/iblock/095/09572a9375c1feb47cb8a422dbdd13c9.jpg" alt="Audi Q8">
-            <h3>Audi Q8</h3>
-            <p>Елегантний і потужний позашляховик, що поєднує стиль та продуктивність, ідеально підходить для будь-яких умов.</p>
-        </div>
-        <div class="model">
-            <img src="https://ionity.ua/wp-content/uploads/2024/07/01fws9glbnnnhqvd7z4ziaa-1-768x432.jpg" alt="Audi e-tron GT">
-            <h3>Audi e-tron GT</h3>
-            <p>Повністю електричний спортивний автомобіль, який демонструє новий рівень продуктивності та стійкості.</p>
-        </div>
-    </div>
+    <section id="цікаві-факти">
+        <h2>Цікаві факти про Minecraft</h2>
+        <ul>
+            <li>Гру створив один розробник — Маркус Перссон, відомий як Notch.</li>
+            <li>Minecraft продано понад 200 мільйонів копій по всьому світі.</li>
+            <li>Гра отримала безліч нагород і стала однією з найпопулярніших відеоігор у світі.</li>
+            <li>У Minecraft є більше 300 мільйонів активних користувачів.</li>
+            <li>У грі можна створювати все: від простих будівель до складних механізмів.</li>
+        </ul>
+        <img src="https://cq.ru/img/f/e/2023/11/08/28774.jpg" alt="Цікаві факти про Minecraft" class="minecraft-img" loading="lazy">
+    </section>
 
-    <!-- Історія -->
-    <div class="history">
-        <h2>Історія Audi</h2>
-        <p>Audi була заснована у 1909 році, і з тих пір компанія стала символом інновацій і технологічного прогресу. Засновник, Август Хорьх, заклав фундамент бренду, який зараз відомий своїм девізом «Vorsprung durch Technik» – «Перевага завдяки технологіям». Протягом десятиліть Audi розробляла революційні автомобілі, починаючи з першого авто з переднім приводом до сучасних електромобілів. Компанія завжди прагнула поєднати продуктивність з елегантністю, і кожен автомобіль втілює ці принципи.</p>
-    </div>
+    <section id="вплив">
+        <h2>Вплив на культуру</h2>
+        <p>Minecraft став справжнім культурним феноменом, надихаючи художників, музикантів та письменників. З'явилися численні фан-арт, музику та літературу, створені на основі цієї гри. Багато дітей навчаються програмуванню та дизайну через модифікацію Minecraft.</p>
+        <img src="https://kartinki.pics/uploads/posts/2021-04/thumbs/1617581679_6-p-fon-dlya-mainkrafta-6.jpg" alt="Вплив Minecraft на культуру" class="minecraft-img" loading="lazy">
+    </section>
 
-    <!-- Технології -->
-    <div class="technology">
-        <h2>Технології Audi</h2>
-        <p>Audi завжди на передовій інновацій. Однією з найбільш відомих технологій є система повного приводу Quattro, яка забезпечує чудове зчеплення і контроль на будь-яких дорогах. Крім того, Audi активно розвиває електромобільність з лінійкою e-tron, яка поєднує потужність і екологічність. Також Audi відома своїми інтерфейсами для водія, як-от Audi Virtual Cockpit, який дозволяє легко керувати всіма функціями автомобіля за допомогою інтуїтивного дисплея.</p>
-    </div>
-</div>
+    <section id="спільнота">
+        <h2>Спільнота Minecraft</h2>
+        <p>Спільнота Minecraft є однією з найбільш активних у світі. Гравці обмінюються ідеями, модами та проектами через численні форуми та соціальні мережі. Від проведення змагань до створення навчальних курсів — можливості безмежні!</p>
+        <img src="https://kartinki.pics/uploads/posts/2021-04/1617581743_38-p-fon-dlya-mainkrafta-42.jpg" alt="Спільнота Minecraft" class="minecraft-img" loading="lazy">
+    </section>
 
-<!-- Контакти -->
-<div class="contact">
-    <h2>Зв'яжіться з нами</h2>
-    <p>Телефон: +380 44 123 4567</p>
-    <p>Email: info@audi.ua</p>
-    <p>Адреса: м. Київ, вул. Автомобільна, 12</p>
-</div>
+    <section id="контакти">
+        <h2>Контакти</h2>
+        <p>Якщо у вас є запитання або ви хочете поділитися своїми ідеями, пишіть мені на <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+    </section>
+</main>
 
 <footer>
-    © 2024 Audi – Всі права захищені
+    <p>© 2024 Все про Minecraft. Усі права захищені.</p>
 </footer>
 
 </body>
